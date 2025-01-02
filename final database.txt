@@ -1,0 +1,68 @@
+CREATE TABLE main (
+    qno INT PRIMARY KEY AUTO_INCREMENT,
+    question VARCHAR(255),
+    option1 VARCHAR(255),
+    option2 VARCHAR(255),
+    option3 VARCHAR(255),
+    option4 VARCHAR(255),
+    answer VARCHAR(255),
+    category VARCHAR(255)
+);
+
+INSERT INTO main (question, option1, option2, option3, option4, answer, category) VALUES
+('What does CPU stand for?', 'Central Processing Unit', 'Computer Personal Unit', 'Central Process Unit', 'Control Processing Unit', 'Central Processing Unit', 'Computer Science'),
+('Which of the following is a programming language?', 'HTML', 'CSS', 'JavaScript', 'All of the above', 'All of the above', 'Computer Science'),
+('What is the main function of the ALU?', 'Perform arithmetic and logic operations', 'Store data', 'Control input/output devices', 'Manage memory', 'Perform arithmetic and logic operations', 'Computer Science'),
+('Which data structure uses LIFO (Last In First Out)?', 'Queue', 'Stack', 'Array', 'Linked List', 'Stack', 'Computer Science'),
+('What is the time complexity of binary search?', 'O(n)', 'O(log n)', 'O(n log n)', 'O(1)', 'O(log n)', 'Computer Science'),
+('Which of the following is not a type of software?', 'Operating System', 'Compiler', 'Database', 'Hardware', 'Hardware', 'Computer Science'),
+('What does HTTP stand for?', 'HyperText Transfer Protocol', 'HyperText Transmission Protocol', 'HighText Transfer Protocol', 'HyperText Transfer Process', 'HyperText Transfer Protocol', 'Computer Science'),
+('Which of the following is a NoSQL database?', 'MySQL', 'PostgreSQL', 'MongoDB', 'SQLite', 'MongoDB', 'Computer Science'),
+('What is the purpose of an operating system?', 'Manage hardware and software resources', 'Provide a platform for applications', 'Control peripheral devices', 'All of the above', 'All of the above', 'Computer Science'),
+('Which algorithm is used for sorting?', 'Dijkstra', 'Bubble Sort', 'Depth First Search', 'Binary Search', 'Bubble Sort', 'Computer Science');
+
+
+INSERT INTO main (question, option1, option2, option3, option4, answer, category) VALUES
+('What is the primary purpose of a compiler?', 'Translate high-level code to machine code', 'Execute code', 'Debug code', 'Store code', 'Translate high-level code to machine code', 'Computer Science'),
+('Which of the following is a characteristic of object-oriented programming?', 'Encapsulation', 'Polymorphism', 'Inheritance', 'All of the above', 'All of the above', 'Computer Science'),
+('What is the main advantage of using linked lists over arrays?', 'Dynamic size', 'Faster access', 'Easier to sort', 'Less memory usage', 'Dynamic size', 'Computer Science'),
+('Which protocol is used to send emails?', 'FTP', 'SMTP', 'HTTP', 'TCP', 'SMTP', 'Computer Science'),
+('What is the purpose of a firewall?', 'To protect a network from unauthorized access', 'To speed up internet connection', 'To store data', 'To manage user accounts', 'To protect a network from unauthorized access', 'Computer Science'),
+('Which of the following is a valid variable name in Python?', '1variable', 'variable_1', 'variable-1', 'variable 1', 'variable_1', 'Computer Science'),
+('What does SQL stand for?', 'Structured Query Language', 'Simple Query Language', 'Structured Question Language', 'Standard Query Language', 'Structured Query Language', 'Computer Science'),
+('Which sorting algorithm is the fastest in the average case?', 'Bubble Sort', 'Quick Sort', 'Insertion Sort', 'Selection Sort', 'Quick Sort', 'Computer Science'),
+('What is the main function of DNS?', 'Translate domain names to IP addresses', 'Store web pages', 'Send emails', 'Manage network traffic', 'Translate domain names to IP addresses', 'Computer Science'),
+('Which of the following is a feature of cloud computing?', 'Scalability', 'Cost efficiency', 'Accessibility', 'All of the above', 'All of the above', 'Computer Science');
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password INT UNIQUE NOT NULL,
+    score INT NOT NULL DEFAULT 0,
+    player_rank VARCHAR(20) NOT NULL DEFAULT 'Noob',
+    highest_score INT NOT NULL DEFAULT 0
+);
+
+
+INSERT INTO users (username, email, password, score, player_rank, highest_score) 
+VALUES 
+    ('john_doe', 'john@example.com', 12345, 0, 'Noob', 0);
+    ('alice_smith', 'alice@example.com', 54321, 0, 'Noob', 0),
+    ('bob_jones', 'bob@example.com', 98765, 0, 'Noob', 0),
+    ('emma_wilson', 'emma@example.com', 45678, 0, 'Noob', 0),
+    ('mike_brown', 'mike@example.com', 87654, 0, 'Noob', 0);
+    ( "jiajain", "jiajainjammy@gmail.com", 1610, 50, 'Junior Developer', 50)
+    ( "avi", "avitripathi@gmail.com, 1209, 50, "Junior Developer, 50)
+
