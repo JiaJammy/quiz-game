@@ -175,12 +175,10 @@ def check_answer():
     play_quiz()  # Load the next question
 
 def highest_score():
-    global player_score, username, password, player_rank, highest_score
+    global player_score, username, password, player_rank, h_score
     cursor.execute("select MAX(score) from users")
-    highest_score = cursor.fetchall()
-    print (highest_score)
-    if player_score > highest_score[0][0]:
-        print("high score")
+    h_score = cursor.fetchall()
+    if player_score > h_score[0][0]:
         messagebox.showinfo("NEW HIGH SCORE!", f'You have a new high score {player_score}')
 
 
